@@ -1,0 +1,17 @@
+langcode: da
+status: true
+dependencies:
+  theme:
+    - consul_man_theme
+id: consul_man_theme_local_actions
+theme: consul_man_theme
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primære adminsitratorhandlinger'
+  provider: core
+  label_display: '0'
+visibility: {  }
