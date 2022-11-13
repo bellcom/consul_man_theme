@@ -112,7 +112,6 @@
 
         {% if has_main_content %}
           <main {{ content_attributes.addClass(content_classes) }}>
-            #has sidebar second {{ has_sidebar_second }}#
               {{ page.breadcrumb }}
             {{ page.content }}
           </main>
@@ -123,7 +122,7 @@
         has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre d-print-none',
       ] %}
 
-{#      {% if has_sidebar_second %}#}
+      {% if has_sidebar_second %}
         <aside {{ attributes.addClass(sidebar_second_classes) }}>
           <div class="layout-sidebar-right">
             {% if show_action_buttons %}
@@ -136,7 +135,7 @@
             </div>
           </div>
         </aside>
-{#      {% endif %}#}
+      {% endif %}
     </div>
     {% endif %}
   </div>

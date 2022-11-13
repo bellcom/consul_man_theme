@@ -11,7 +11,7 @@ use Drupal\taxonomy\Entity\Term;
  */
 function consul_man_theme_preprocess_page(array &$variables) {
   $variables['show_action_buttons'] = true;
-  
+
 }
 
 /**
