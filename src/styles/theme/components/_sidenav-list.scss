@@ -75,7 +75,7 @@ $sidenav-list-dot-spacing: 22px;
 							background: $background_color__button!important;
 							transition: all 0.2s ease-in-out;
 						}
-						
+
 					}
 					& > .facets-checkbox {
 						&:checked {
@@ -150,6 +150,7 @@ $sidenav-list-dot-spacing: 22px;
 			transition: all 0.2s ease-in-out;
 			&:hover {
 				background-color: $background_color__button_hover;
+                font-weight: bold;
 			}
 			a {
 				color: $color-white;
@@ -162,19 +163,35 @@ $sidenav-list-dot-spacing: 22px;
 				padding: 10px 15px;
 			}
 			& > .sidenav-sub_list {
-        padding-top: 12px;
-        padding-bottom: 12px;
 				a {
 					color: $color-white;
 				}
+                & li:hover {
+                  background-color: $background-color__button;
+                }
         & >  li {
           border-top: 0;
+
           &:hover {
             background-color: transparent;
           }
         }
 			}
 		}
+        & .active > a {
+          background-color: $background_color__button_hover;
+        }
+        & .active > a > .sub-link-div {
+          font-weight: bold;
+        }
+        & .active li {
+          background-color: $background_color__button_deep;
+
+          &:hover {
+            background-color: $background_color__button;
+          }
+        }
+
 		& > li.active {
 			background-color: $background_color__button_hover;
 			border-top: 1px solid $color-light-gray1;
@@ -188,13 +205,29 @@ $sidenav-list-dot-spacing: 22px;
 		& > li.current {
 			background-color: $background_color__button_hover;
 			border-top: 1px solid $color-light-gray1;
-      border-left: 0;
+            border-left: 0;
+            & .has-submenu {
+              background-color: $background_color__button_hover;
+
+              & > a {
+                & > .sub-link-div {
+                  font-weight: 700;
+                }
+              }
+
+              &:hover {
+                background-color: $background_color__button_hover;
+              }
+            }
 			& > a {
 				font-family: "Museo 700", sans-serif;
 				font-weight: bold;
 				font-style: normal;
 				font-display: swap;
 			}
+            & .has-submenu > ul {
+              background-color: $background_color__button_deep;
+            }
 			& > ul {
 				& > li {
 					& > a {
@@ -246,7 +279,7 @@ $sidenav-list-dot-spacing: 22px;
 	.sidenav-sub_list {
 		& >  li {
 			& >  a {
-				padding-left: 15px;
+				padding-left: 30px;
 				font-size: 1.5rem;
 			}
 			&::before {
@@ -254,7 +287,9 @@ $sidenav-list-dot-spacing: 22px;
 			}
 		}
 		background-color: $color-primary;
+
 		& > li.active {
+            font-weight: 700 !important;
 			a {
 				&::before {
 					color: $color-white;
@@ -407,8 +442,10 @@ ul.limited-height >  .limited-height__toggle {
   }
 }
 
+
 // Touch
 .touchevents {}
 
 // No touch
 .no-touchevents {}
+

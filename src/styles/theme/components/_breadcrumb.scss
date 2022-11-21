@@ -25,6 +25,7 @@
   margin-top: 45px;
   margin-bottom: 2rem;
   font-family: "Museo 300", sans-serif;
+  white-space: nowrap;
 
   li {
     display: inline-block;
@@ -45,6 +46,8 @@
 
   a {
     color: $color__link;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
     &, &:hover {
       text-decoration: none;
       border-bottom: 1px dotted $color-dark-gray1;
@@ -62,6 +65,12 @@
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
+
+@media only screen and (max-width: 992px) {
+  .breadcrumb {
+    white-space: normal;
+  }
+}
 
 // Mobile - and up
 @include media-breakpoint-up(xs) {}
