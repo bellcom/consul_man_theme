@@ -14,12 +14,14 @@
 
             <div class="flexy-spacer d-sm-none"></div>
 
-            <!-- Begin - logo -->
             <a href="{{ url('<front>') }}" class="custom-header__logo">
-              <img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Ringsted Kommune" />
+            {% if custom_logo %}
+              #A<img src="{{ custom_logo }}" alt="Logo" />
+            {% else %}
+              #B<img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Logo" />
+            {% endif %}
             </a>
-            <!-- End - logo -->
-
+            
             <!--{% include '@consul_man_theme/includes/action-buttons.html.twig' %}-->
 
             <div class="flexy-spacer"></div>
