@@ -16,12 +16,12 @@
 
             <a href="{{ url('<front>') }}" class="custom-header__logo">
             {% if custom_logo %}
-              #A<img src="{{ custom_logo }}" alt="Logo" />
+              <img src="{{ custom_logo }}" alt="Logo" />
             {% else %}
-              #B<img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Logo" />
+              <img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Logo" />
             {% endif %}
             </a>
-            
+
             <!--{% include '@consul_man_theme/includes/action-buttons.html.twig' %}-->
 
             <div class="flexy-spacer"></div>
